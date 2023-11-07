@@ -1,10 +1,10 @@
---Fiz em dupla com a Camylle--
+--Fiz dupla com a Camylle--
 -- phpMyAdmin SQL Dump
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 26-Out-2023 às 17:19
+-- Tempo de geração: 07-Nov-2023 às 15:49
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 8.2.0
 
@@ -43,6 +43,8 @@ CREATE TABLE `enviar dados` (
 
 CREATE TABLE `informações pessoais` (
   `id` int(11) NOT NULL,
+  `id_pref` int(255) NOT NULL,
+  `cor_faixa` int(255) NOT NULL,
   `aikidoista` int(11) NOT NULL,
   `email` int(11) NOT NULL,
   `senha` varchar(20) NOT NULL
