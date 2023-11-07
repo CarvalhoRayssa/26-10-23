@@ -1,10 +1,10 @@
---Fiz dupla com a Camylle--
+--Fiz com a Camylle
 -- phpMyAdmin SQL Dump
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 07-Nov-2023 às 15:49
+-- Tempo de geração: 07-Nov-2023 às 16:07
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 8.2.0
 
@@ -25,19 +25,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `enviar dados`
---
-
-CREATE TABLE `enviar dados` (
-  `id` int(11) NOT NULL,
-  `kimono` int(11) NOT NULL,
-  `faixa` int(11) NOT NULL,
-  `hakama` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
 -- Estrutura da tabela `informações pessoais`
 --
 
@@ -50,43 +37,15 @@ CREATE TABLE `informações pessoais` (
   `senha` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- --------------------------------------------------------
-
 --
--- Estrutura da tabela `preferencias`
+-- RELACIONAMENTOS PARA TABELAS `informações pessoais`:
+--   `id_pref`
+--       `preferencias` -> `id`
 --
-
-CREATE TABLE `preferencias` (
-  `id` int(11) NOT NULL,
-  `ataques` int(11) NOT NULL,
-  `armas` int(11) NOT NULL,
-  `katames` int(11) NOT NULL,
-  `nagues` int(11) NOT NULL,
-  `cor da faixa` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `tarefa de casa`
---
-
-CREATE TABLE `tarefa de casa` (
-  `id` int(11) NOT NULL,
-  `erros` int(11) NOT NULL,
-  `acertos` int(11) NOT NULL,
-  `melhorar` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Índices para tabelas despejadas
 --
-
---
--- Índices para tabela `enviar dados`
---
-ALTER TABLE `enviar dados`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Índices para tabela `informações pessoais`
@@ -95,43 +54,13 @@ ALTER TABLE `informações pessoais`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `preferencias`
---
-ALTER TABLE `preferencias`
-  ADD PRIMARY KEY (`id`);
-
---
--- Índices para tabela `tarefa de casa`
---
-ALTER TABLE `tarefa de casa`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT de tabelas despejadas
 --
-
---
--- AUTO_INCREMENT de tabela `enviar dados`
---
-ALTER TABLE `enviar dados`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `informações pessoais`
 --
 ALTER TABLE `informações pessoais`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de tabela `preferencias`
---
-ALTER TABLE `preferencias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de tabela `tarefa de casa`
---
-ALTER TABLE `tarefa de casa`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
